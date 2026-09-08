@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MCA Student Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="navbar">
+
+        <div class="brand">
+            <div class="brand-icon">
+                🎓
+            </div>
+
+            <div>
+                <h2>MCA<span>Hub</span></h2>
+                <p>Student Information Portal</p>
+            </div>
+        </div>
+
+        <div class="nav-actions">
+
+            <button class="theme-btn" id="themeBtn" title="Toggle theme">
+                🌙
+            </button>
+
+            <button class="profile-btn" onclick="showNotification()">
+                <span>👤</span>
+                <div>
+                    <strong>Admin</strong>
+                    <small>Administrator</small>
+                </div>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="welcome-badge">
+                <span class="pulse"></span>
+                MCA Student Portal
+            </div>
+
+            <h1>
+                Manage Your
+                <span>Academic Community</span>
+            </h1>
+
+            <p>
+                A centralized student information portal designed
+                to organize and access MCA student records efficiently.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn" onclick="scrollToStudents()">
+                    Explore Students
+                    <span>→</span>
+                </button>
+
+                <button class="secondary-btn" onclick="showAbout()">
+                    Learn More
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="hero-visual">
+
+            <div class="floating-card card-one">
+                <span>📚</span>
+                <div>
+                    <strong>Academic</strong>
+                    <small>Records</small>
+                </div>
+            </div>
+
+            <div class="floating-card card-two">
+                <span>💻</span>
+                <div>
+                    <strong>Technology</strong>
+                    <small>MCA Program</small>
+                </div>
+            </div>
+
+            <div class="main-orb">
+                <div class="orb-inner">
+                    🎓
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STATISTICS ================= -->
+
+    <section class="stats-section">
+
+        <div class="stat-card">
+
+            <div class="stat-icon purple">
+                👨‍🎓
+            </div>
+
+            <div>
+                <span>Total Students</span>
+                <h2 id="studentCount">03</h2>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon blue">
+                🎓
+            </div>
+
+            <div>
+                <span>Programme</span>
+                <h2>MCA</h2>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon green">
+                📖
+            </div>
+
+            <div>
+                <span>Department</span>
+                <h2>Computer Applications</h2>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon orange">
+                ⚡
+            </div>
+
+            <div>
+                <span>Portal Status</span>
+                <h2 class="online">
+                    <span></span> Active
+                </h2>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STUDENTS ================= -->
+
+    <main class="students-section" id="students">
+
+        <div class="section-heading">
+
+            <div>
+                <div class="section-label">
+                    STUDENT DIRECTORY
+                </div>
+
+                <h2>Meet the MCA <span>Class</span></h2>
+
+                <p>
+                    View and explore student information from the MCA programme.
+                </p>
+            </div>
+
+
+            <div class="search-container">
+
+                <span>🔍</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search student..."
+                    onkeyup="searchStudents()"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- Student Cards -->
+
+        <div class="student-grid" id="studentGrid">
+
+
+            <!-- STUDENT 1 -->
+
+            <div
+                class="student-card"
+                data-name="Namratha R"
+                onclick="openStudent('Namratha R', '2547234', 'MCA', 'NR')"
+            >
+
+                <div class="card-top">
+
+                    <div class="avatar avatar-purple">
+                        NR
+                    </div>
+
+                    <span class="status">
+                        <span></span> Active
+                    </span>
+
+                </div>
+
+                <div class="student-info">
+
+                    <h3>Namratha R</h3>
+
+                    <p class="role">
+                        Master of Computer Applications
+                    </p>
+
+                    <div class="student-meta">
+
+                        <div>
+                            <span>Register Number</span>
+                            <strong>2547234</strong>
+                        </div>
+
+                        <div>
+                            <span>Programme</span>
+                            <strong>MCA</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="view-btn">
+                    View Profile
+                    <span>→</span>
+                </button>
+
+            </div>
+
+
+            <!-- STUDENT 2 -->
+
+            <div
+                class="student-card"
+                data-name="Yash Barjatya"
+                onclick="openStudent('Yash Barjatya', '2547257', 'MCA', 'YB')"
+            >
+
+                <div class="card-top">
+
+                    <div class="avatar avatar-blue">
+                        YB
+                    </div>
+
+                    <span class="status">
+                        <span></span> Active
+                    </span>
+
+                </div>
+
+                <div class="student-info">
+
+                    <h3>Yash Barjatya</h3>
+
+                    <p class="role">
+                        Master of Computer Applications
+                    </p>
+
+                    <div class="student-meta">
+
+                        <div>
+                            <span>Register Number</span>
+                            <strong>2547257</strong>
+                        </div>
+
+                        <div>
+                            <span>Programme</span>
+                            <strong>MCA</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="view-btn">
+                    View Profile
+                    <span>→</span>
+                </button>
+
+            </div>
+
+
+            <!-- STUDENT 3 -->
+
+            <div
+                class="student-card"
+                data-name="Ajanya Vinayan"
+                onclick="openStudent('Ajanya Vinayan', '2547205', 'MCA', 'AV')"
+            >
+
+                <div class="card-top">
+
+                    <div class="avatar avatar-green">
+                        AV
+                    </div>
+
+                    <span class="status">
+                        <span></span> Active
+                    </span>
+
+                </div>
+
+                <div class="student-info">
+
+                    <h3>Ajanya Vinayan</h3>
+
+                    <p class="role">
+                        Master of Computer Applications
+                    </p>
+
+                    <div class="student-meta">
+
+                        <div>
+                            <span>Register Number</span>
+                            <strong>2547205</strong>
+                        </div>
+
+                        <div>
+                            <span>Programme</span>
+                            <strong>MCA</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="view-btn">
+                    View Profile
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- No Search Result -->
+
+        <div class="no-results" id="noResults">
+
+            <div>🔎</div>
+
+            <h3>No students found</h3>
+
+            <p>Try searching with a different name.</p>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features-section">
+
+        <div class="section-heading centered">
+
+            <div class="section-label">
+                PORTAL FEATURES
+            </div>
+
+            <h2>Built for a <span>Smarter Campus</span></h2>
+
+            <p>
+                Simple tools to make student information easier to access and manage.
+            </p>
+
+        </div>
+
+
+        <div class="features-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🔎
+                </div>
+
+                <h3>Quick Search</h3>
+
+                <p>
+                    Find student records instantly using the intelligent
+                    search interface.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    👤
+                </div>
+
+                <h3>Student Profiles</h3>
+
+                <p>
+                    Access essential academic information through
+                    interactive student profiles.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    📊
+                </div>
+
+                <h3>Dashboard Insights</h3>
+
+                <p>
+                    Get a quick overview of student and programme
+                    information through dashboard statistics.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🔐
+                </div>
+
+                <h3>Organized Records</h3>
+
+                <p>
+                    Keep student information structured and easy
+                    to navigate.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-brand">
+
+            <div class="brand-icon">
+                🎓
+            </div>
+
+            <div>
+                <strong>MCAHub</strong>
+                <p>Student Information Portal</p>
+            </div>
+
+        </div>
+
+        <p>
+            © 2026 MCAHub · Collaborative Git Workflow Project
+        </p>
+
+        <div class="footer-tech">
+            HTML · CSS · JavaScript
+        </div>
+
+    </footer>
+
+
+    <!-- ================= STUDENT MODAL ================= -->
+
+    <div class="modal-overlay" id="studentModal">
+
+        <div class="modal">
+
+            <button class="close-btn" onclick="closeModal()">
+                ×
+            </button>
+
+            <div class="modal-avatar" id="modalAvatar">
+                NR
+            </div>
+
+            <div class="modal-status">
+                <span></span> Currently Active
+            </div>
+
+            <h2 id="modalName">
+                Namratha R
+            </h2>
+
+            <p class="modal-programme">
+                Master of Computer Applications
+            </p>
+
+
+            <div class="modal-details">
+
+                <div class="detail-box">
+
+                    <span>REGISTER NUMBER</span>
+
+                    <strong id="modalRegister">
+                        2547234
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-box">
+
+                    <span>PROGRAMME</span>
+
+                    <strong id="modalProgramme">
+                        MCA
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-message">
+
+                <span>🎓</span>
+
+                <p>
+                    Student record successfully retrieved
+                    from the MCA Student Portal.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= NOTIFICATION ================= -->
+
+    <div class="notification" id="notification">
+
+        <div class="notification-icon">
+            ✓
+        </div>
+
+        <div>
+            <strong>Portal Active</strong>
+            <p>Student information system is running successfully.</p>
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
