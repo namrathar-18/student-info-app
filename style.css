@@ -1402,3 +1402,44 @@ footer > p {
         grid-template-columns: 1fr;
     }
 }
+/* UI Developer Enhancements */
+
+.student-card {
+    position: relative;
+}
+
+.student-card:hover {
+    transform: translateY(-10px) scale(1.01);
+}
+
+.student-info h3 {
+    transition: color 0.3s ease;
+}
+
+.student-card:hover .student-info h3 {
+    color: var(--primary);
+}
+
+.view-btn {
+    letter-spacing: 0.2px;
+}
+
+.section-label::before {
+    content: "✦ ";
+}
+
+.feature-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(108, 92, 231, 0.06);
+    right: -30px;
+    bottom: -30px;
+}
