@@ -1420,3 +1420,24 @@ footer > p {
 .view-btn:hover {
     letter-spacing: 0.3px;
 }
+/* Contact Information - Student 2 */
+
+.contact-info {
+    margin-top: 18px;
+    padding: 14px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.contact-info h4 {
+    font-size: 12px;
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+.contact-info p {
+    font-size: 10px;
+    color: var(--muted);
+    margin: 5px 0;
+}
