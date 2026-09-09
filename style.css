@@ -1402,3 +1402,21 @@ footer > p {
         grid-template-columns: 1fr;
     }
 }
+
+/* UI improvement - Student 2 */
+.student-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.student-card:hover {
+    transform: translateY(-10px) scale(1.01);
+    box-shadow: 0 20px 45px rgba(40, 37, 80, 0.16);
+}
+
+.view-btn {
+    transition: all 0.25s ease;
+}
+
+.view-btn:hover {
+    letter-spacing: 0.3px;
+}
