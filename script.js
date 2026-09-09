@@ -55,10 +55,19 @@ function searchStudents() {
 
     studentCards.forEach(card => {
 
-        const studentName =
-            card.dataset.name.toLowerCase();
+        /*
+         * Search through all visible information
+         * inside the student card.
+         *
+         * This allows searching by:
+         * - Student name
+         * - Register number
+         * - Programme
+         */
+        const studentDetails =
+            card.textContent.toLowerCase();
 
-        if (studentName.includes(searchValue)) {
+        if (studentDetails.includes(searchValue)) {
 
             card.style.display = "block";
 
@@ -72,6 +81,10 @@ function searchStudents() {
 
     });
 
+
+    /* =========================================
+       DISPLAY NO RESULTS MESSAGE
+    ========================================= */
 
     if (visibleStudents === 0) {
 
